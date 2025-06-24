@@ -48,7 +48,7 @@ You can personalize this project by:
 
 This project is for **educational and personal use only**. Please do not redistribute without credit.
 
-## 📁 Folder Structure
+## Folder Structure
 ```plaintext
 outfit-generator/
 │
