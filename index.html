@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outfit Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Outfit Generator</h1>
+
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="category" onclick="toggleCategory('tops')">Tops</div>
+      <div id="tops" class="item-row">
+        <img src="tops/top1.png" onclick="selectClothing('top', 'tops/top1.png')" />
+        <img src="tops/top2.png" onclick="selectClothing('top', 'tops/top2.png')" />
+        <button class="remove-btn" onclick="removeClothing('top')">Remove Top</button>
+      </div>
+
+      <div class="category" onclick="toggleCategory('bottoms')">Bottoms</div>
+      <div id="bottoms" class="item-row">
+        <img src="bottoms/bottom1.png" onclick="selectClothing('bottom', 'bottoms/bottom1.png')" />
+        <img src="bottoms/bottom2.png" onclick="selectClothing('bottom', 'bottoms/bottom2.png')" />
+        <button class="remove-btn" onclick="removeClothing('bottom')">Remove Bottom</button>
+      </div>
+
+      <div class="category" onclick="toggleCategory('shoes')">Shoes</div>
+      <div id="shoes" class="item-row">
+        <img src="shoes/shoes1.png" onclick="selectClothing('shoes', 'shoes/shoes1.png')" />
+        <button class="remove-btn" onclick="removeClothing('shoes')">Remove Shoes</button>
+      </div>
+
+      <button class="export-btn" onclick="randomizeOutfit()">Random Outfit</button>
+    </div>
+
+    <!-- MODEL -->
+    <div class="model-container">
+      <img src="model.png" class="model" />
+      <img id="top-layer" class="clothing" />
+      <img id="bottom-layer" class="clothing" />
+      <img id="shoes-layer" class="clothing" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
