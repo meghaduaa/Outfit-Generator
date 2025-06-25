@@ -1,11 +1,16 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+html {
+  height: 100%;
   background: url('barbie-bg.jpg') no-repeat center center fixed;
   background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -19,14 +24,19 @@ h1 {
 
 .layout {
   display: flex;
+  align-items: center;
   height: calc(100vh - 80px);
   padding: 0 30px;
   box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .sidebar {
   width: 200px;
-  background: rgba(255, 192, 222, 0.3);
+  height: 60vh;
+  background: rgba(255, 192, 203, 0.4);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;
   overflow-y: auto;
@@ -34,11 +44,18 @@ h1 {
 }
 
 .category {
-  font-weight: 600;
-  color: #b60078;
-  margin-bottom: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  color: #ff4da6;
+  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
+  text-shadow: 1px 1px 3px #ffb6e9;
+  transition: all 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  color: #ff85c1;
 }
 
 .item-row {
@@ -70,6 +87,7 @@ h1 {
   margin-top: 4px;
   align-self: flex-start;
 }
+
 .remove-btn:hover {
   text-decoration: underline;
 }
@@ -85,6 +103,7 @@ h1 {
   font-weight: bold;
   width: 100%;
 }
+
 .export-btn:hover {
   background-color: #ff62af;
 }
@@ -98,7 +117,8 @@ h1 {
   margin-top: -40px;
 }
 
-.model, .clothing {
+.model,
+.clothing {
   position: absolute;
   max-height: 85vh;
   z-index: 1;
