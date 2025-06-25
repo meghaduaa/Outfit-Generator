@@ -15,24 +15,32 @@
   <div class="layout">
     <!-- SIDEBAR -->
     <div class="sidebar">
-      <div class="category" onclick="toggleCategory('tops')">Tops</div>
-      <div id="tops" class="item-row">
+      <button class="toggle-btn" onclick="toggleCategory('tops')">Tops</button>
+      <div id="tops" class="item-row scrollable-items">
         <img src="tops/top1.png" onclick="selectClothing('top', 'tops/top1.png')" />
         <img src="tops/top2.png" onclick="selectClothing('top', 'tops/top2.png')" />
+        <img src="tops/top3.png" onclick="selectClothing('top', 'tops/top3.png')" />
+        <img src="tops/top4.png" onclick="selectClothing('top', 'tops/top4.png')" />
+        <img src="tops/top5.png" onclick="selectClothing('top', 'tops/top5.png')" />
+        <img src="tops/top6.png" onclick="selectClothing('top', 'tops/top6.png')" />
+        <img src="tops/top7.png" onclick="selectClothing('top', 'tops/top7.png')" />
+        <img src="tops/top8.png" onclick="selectClothing('top', 'tops/top8.png')" />
+        <img src="tops/top9.png" onclick="selectClothing('top', 'tops/top9.png')" />
         <button class="remove-btn" onclick="removeClothing('top')">Remove Top</button>
       </div>
 
-      <div class="category" onclick="toggleCategory('bottoms')">Bottoms</div>
-      <div id="bottoms" class="item-row">
+      <button class="toggle-btn" onclick="toggleCategory('bottoms')">Bottoms</button>
+      <div id="bottoms" class="item-row scrollable-items">
         <img src="bottoms/bottom1.png" onclick="selectClothing('bottom', 'bottoms/bottom1.png')" />
         <img src="bottoms/bottom2.png" onclick="selectClothing('bottom', 'bottoms/bottom2.png')" />
+        <img src="bottoms/bottom3.png" onclick="selectClothing('bottom', 'bottoms/bottom3.png')" />
+        <img src="bottoms/bottom4.png" onclick="selectClothing('bottom', 'bottoms/bottom4.png')" />
+        <img src="bottoms/bottom5.png" onclick="selectClothing('bottom', 'bottoms/bottom5.png')" />
+        <img src="bottoms/bottom6.png" onclick="selectClothing('bottom', 'bottoms/bottom6.png')" />
+        <img src="bottoms/bottom7.png" onclick="selectClothing('bottom', 'bottoms/bottom7.png')" />
+        <img src="bottoms/bottom8.png" onclick="selectClothing('bottom', 'bottoms/bottom8.png')" />
+        <img src="bottoms/bottom9.png" onclick="selectClothing('bottom', 'bottoms/bottom9.png')" />
         <button class="remove-btn" onclick="removeClothing('bottom')">Remove Bottom</button>
-      </div>
-
-      <div class="category" onclick="toggleCategory('shoes')">Shoes</div>
-      <div id="shoes" class="item-row">
-        <img src="shoes/shoes1.png" onclick="selectClothing('shoes', 'shoes/shoes1.png')" />
-        <button class="remove-btn" onclick="removeClothing('shoes')">Remove Shoes</button>
       </div>
 
       <button class="export-btn" onclick="randomizeOutfit()">Random Outfit</button>
@@ -43,7 +51,6 @@
       <img src="model.png" class="model" />
       <img id="top-layer" class="clothing" />
       <img id="bottom-layer" class="clothing" />
-      <img id="shoes-layer" class="clothing" />
     </div>
   </div>
 
