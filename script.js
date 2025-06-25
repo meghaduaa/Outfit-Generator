@@ -1,7 +1,9 @@
-function toggleCategory(id) {
-  const section = document.getElementById(id);
-  section.style.display = section.style.display === 'flex' ? 'none' : 'flex';
+function toggleCategory(category) {
+  const section = document.getElementById(category);
+  section.classList.toggle("active");
 }
+
+
 
 function selectClothing(type, imagePath) {
   const sound = document.getElementById('click-sound');
@@ -32,14 +34,17 @@ function removeClothing(type) {
 }
 
 
-function randomizeOutfit() {
-  const topOptions = ['tops/top1.png', 'tops/top2.png'];
-  const bottomOptions = ['bottoms/bottom1.png', 'bottoms/bottom2.png'];
-  const shoesOptions = ['shoes/shoes1.png'];
-
-  const random = arr => arr[Math.floor(Math.random() * arr.length)];
-
-  selectClothing('top', random(topOptions));
-  selectClothing('bottom', random(bottomOptions));
-  selectClothing('shoes', random(shoesOptions));
+function getRandomClothing(folder) {
+  const count = 9; 
+  const randomIndex = Math.floor(Math.random() * count) + 1;
+  return `${folder}/${folder.slice(0, -1)}${randomIndex}.png`;
 }
+
+function randomizeOutfit() {
+  const top = getRandomClothing("tops");
+  const bottom = getRandomClothing("bottoms");
+
+  selectClothing('top', top);
+  selectClothing('bottom', bottom);
+}
+
